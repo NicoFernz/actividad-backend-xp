@@ -18,6 +18,15 @@ export function createApp(dependencies: AppDependencies = {}): Express {
   const repository = dependencies.tareasRepository ?? new InMemoryTareasRepository();
 
   app.use(express.json());
+  app.get("/api/v1", (_request, response) => response.json({
+    name: "API de tareas",
+    version: "1.0.0",
+    links: {
+      tareas: "/api/v1/tareas",
+      openapi: "/api/v1/openapi.json",
+      docs: "/docs",
+    },
+  }));
   app.get("/api/v1/openapi.json", (_request, response) => response.json(openApiDocument));
   app.use("/docs", swaggerUi.serve, swaggerUi.setup(openApiDocument));
   app.use("/api/v1/tareas", createTareasRouter(repository));

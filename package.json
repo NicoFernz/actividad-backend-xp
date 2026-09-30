@@ -1,26 +1,26 @@
 {
-  "name": "actividad-backend-xp",
-  "version": "1.0.0",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "dev": "tsx watch src/server.ts",
-    "build": "tsc -p tsconfig.json",
-    "start": "node dist/server.js",
-    "test": "tsx --test test/*.test.ts"
-  },
-  "dependencies": {
-    "express": "^5.1.0",
-    "swagger-ui-express": "^5.0.1",
-    "zod": "^4.1.5"
-  },
-  "devDependencies": {
-    "@types/express": "^5.0.3",
-    "@types/node": "^22.18.6",
-    "@types/supertest": "^6.0.3",
-    "@types/swagger-ui-express": "^4.1.8",
-    "supertest": "^7.1.4",
-    "tsx": "^4.20.5",
-    "typescript": "^5.9.2"
-  }
+    "name": "actividad-backend-xp",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "tsx watch src/server.ts",
+        "build": "tsc -p tsconfig.json",
+        "start": "node dist/src/server.js",
+        "test": "tsx --test test/*.test.ts"
+    },
+    "dependencies": {
+        "express": "^5.1.0",
+        "swagger-ui-express": "^5.0.1",
+        "zod": "^4.1.5"
+    },
+    "devDependencies": {
+        "@types/express": "^5.0.3",
+        "@types/node": "^22.18.6",
+        "@types/supertest": "^6.0.3",
+        "@types/swagger-ui-express": "^4.1.8",
+        "supertest": "^7.1.4",
+        "tsx": "^4.20.5",
+        "typescript": "^5.9.2"
+    }
 }
